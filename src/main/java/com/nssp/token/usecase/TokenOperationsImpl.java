@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
-@Component
+@Component("tokenOperations")
 public class TokenOperationsImpl implements TokenOperations {
     @Cacheable("token")
     public String get() {
