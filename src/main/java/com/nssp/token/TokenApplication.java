@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @SpringBootApplication
-@RestController
-@RequestMapping("/v1")
 @EnableCaching
 public class TokenApplication {
 
@@ -20,9 +18,4 @@ public class TokenApplication {
         SpringApplication.run(TokenApplication.class, args);
     }
 
-    @GetMapping("/token")
-    @Cacheable("token")
-    public String get() {
-        return UUID.randomUUID().toString();
-    }
 }
